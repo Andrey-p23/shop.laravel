@@ -1,0 +1,155 @@
+//Third Party Libraries
+//@import "node_modules/bootstrap/scss/mixins/_reset-text.scss";
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+
+  //&:visited {
+  //  color: $text-color;
+  //}
+}
+
+h1, h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 38px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
+
+.button {
+  border: 1px solid $text-color;
+  padding: 10px 30px;
+
+  &:hover {
+    color: $white;
+    background: $text-color;
+  }
+}
+
+.button-white {
+  border: 1px solid $white;
+  color: $white !important;
+
+  &:hover {
+    color: $text-color !important;
+    background: $white;
+  }
+}
+
+.section-description {
+  width: 60%;
+  margin: auto;
+}
+
+.button-container {
+  margin: 35px 0 60px;
+}
+
+
+
+.featured-section {
+  background: url('/img/shop.png') no-repeat;
+  background-size: cover;
+  padding: 0 0 10px;
+
+  h1{
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: $gutter;
+
+    .product {
+      img{
+        width: 45%;
+      }
+
+      .product-name{
+        font-size: 16px;
+      }
+
+      .product-price{
+        font-size: 16px;
+      }
+    }
+
+  }
+}
+
+.blog-section {
+  background: $light-gray-background;
+  border-top: 1px solid $separator-color;
+  padding: 0px 0;
+  padding-bottom: 50px;
+
+  .blog-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 1fr 1fr 1fr
+    grid-gap: $gutter;
+    margin: 40px 0 0px;
+    grid-template-areas:
+            "blog1 blog2 blog3";
+
+    #blog1 {
+      grid-area: blog1;
+    }
+
+    #blog2 {
+      grid-area: blog2;
+    }
+
+    #blog3 {
+      grid-area: blog3;
+    }
+
+    .blog-post {
+      text-align: center;
+      img{
+        width: 90%;
+      }
+    }
+
+
+  }
+}
+
